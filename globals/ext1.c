@@ -1,0 +1,2 @@
+
+int shared = 10;
