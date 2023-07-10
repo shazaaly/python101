@@ -29,7 +29,8 @@ class Animal:
         self.__blooded = blooded
 
     def __str__(self):
-        return "A {} is {} and is {}, also is {}".format(type(self).__name__, self.birthType, self.blooded, self.appearance)
+        return "A {} is {} and is {}, also is {}".format(type(self).__name__,\
+            self.birthType, self.blooded, self.appearance)
 
 
 # inherir all
