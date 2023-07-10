@@ -29,15 +29,13 @@ class Animal:
         self.__blooded = blooded
 
     def __str__(self):
-        return "A {} is {} and is {}, also is {}.format(type(self).__name__, \
-            self.birthType, self.blooded, self.appearance)"
+        return "A {} is {} and is {}, also is {}".format(type(self).__name__, self.birthType, self.blooded, self.appearance)
 
 
 # inherir all
 class Mammal(Animal):
     def __init__(self, birthType="alive", appearance="hair or fur",
                  blooded="warm", nurseYoung=True):
-
         Animal.__init__(self, birthType, appearance, blooded)
         self._nurseYoung = nurseYoung
 
@@ -50,5 +48,18 @@ class Mammal(Animal):
         self.__nurseYoung = nurseYoung
 
     def __str__(self):
-        return super().__str__() + "and + {} + that they nurse \
-            youngs.format(self.nurseYoung)"
+        return "A {} is {} and is {}, also is \
+            {}.".format(type(self).__name__, self.birthType, self.blooded,
+                        self.appearance)
+
+
+class Reptiles(Animal):
+    def __init__(self, birthType="eggs", appearance="scales",
+                 blooded="cold", layEggs=True):
+        super().__init__(birthType, appearance, blooded)
+        self.layEggs = layEggs
+
+
+animal1 = Animal("born alive")
+print(animal1.birthType)
+print(animal1)
