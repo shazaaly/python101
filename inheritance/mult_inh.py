@@ -4,6 +4,9 @@ class Product:
         self.price = price
         self.desc = desc
 
+    def display_price(self):
+        print(f"Price : {self.price}")
+
 
 class Category:
     def __init__(self, cat_name):
@@ -22,10 +25,11 @@ class OnlineProduct(Product, Category):
     def displat_online_data(self):
         print(f"Online product name{self.name}")
         print(f"Online product cat_name{self.cat_name}")
-        print(f"Online product shipping{self.shipping}")
+        print("Online product shipping{self.shipping}")
 
 
 online_product = OnlineProduct("Laptop", 1500, "High-performance laptop",
                                "Electronics", "Free shipping")
 
 online_product.displat_online_data()
+online_product.display_price()
