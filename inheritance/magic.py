@@ -32,5 +32,23 @@ class Animal:
         return "A {} is {} and is {}, also is {}.format(type(self).__name__, \
             self.birthType, self.blooded, self.appearance)"
 
-# inherir all
 
+# inherir all
+class Mammal(Animal):
+    def __init__(self, birthType="alive", appearance="hair or fur",
+                 blooded="warm", nurseYoung=True):
+
+        Animal.__init__(self, birthType, appearance, blooded)
+        self._nurseYoung = nurseYoung
+
+    @property
+    def nurseYoung(self):
+        return self.__nurseYoung
+
+    @nurseYoung.setter
+    def nurseYoung(self, nurseYoung):
+        self.__nurseYoung = nurseYoung
+
+    def __str__(self):
+        return super().__str__() + "and + {} + that they nurse \
+            youngs.format(self.nurseYoung)"
