@@ -1,2 +1,1 @@
-https://twitter.com/ShazaAlyOthman
-Alx inspired SW engineer 
+{"name": "John Doe", "age": 30, "is_student": true, "hobbies": ["reading", "writing", "coding"]}
