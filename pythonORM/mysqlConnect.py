@@ -11,7 +11,8 @@ employees = ["Shaza", "Hussien", "Ibrahim", "Dany"]
 db = MySQLdb.connect(host=MY_HOST, user=MY_USER, passwd=MY_PASS, db=MY_DB)
 cur = db.cursor()
 cur.execute(
-    "CREATE TABLE IF NOT EXISTS employees(id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,\
+    "CREATE TABLE IF NOT EXISTS employees(id INT UNSIGNED AUTO_INCREMENT \
+        PRIMARY KEY,\
         title TEXT NOT NULL)")
 
 # Insert data into the "employees" table
