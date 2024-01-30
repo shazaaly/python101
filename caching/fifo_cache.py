@@ -12,13 +12,30 @@ class FIFOCache(SimpleCache):
         
     def access(self, data):
         """ a method to chech data in cache """
-        if data not in cache:
-            if len(cache) >= capacity:
+        if data not in self.cache:
+            if len(self.cache) >= self.capacity:
                 self.cache.popleft()
                
             self.cache.append(data)
+            
     def show_cache(self):
         self.display()
-        
+    
+    
+# test
+fifo_cache = FIFOCache(3)
+fifo_cache.access("Hello 1")
+fifo_cache.access("Hello 2")
+fifo_cache.access("Hello 3")
+fifo_cache.access("Hello 4")
+fifo_cache.access("Hello 5")
+fifo_cache.access("Hello 6")
+fifo_cache.access("Hello 7")
+fifo_cache.access("Hello 8")
+fifo_cache.access("Hello 10")
+fifo_cache.access("Hello 11")
+fifo_cache.access("Hello 12")
+fifo_cache.show_cache()
+
                 
         

@@ -10,9 +10,10 @@ class SimpleCache:
     def __init__(self):
         """cache method"""
         self.cache = deque()
-        
+
        
     def display(self):
         print(list(self.cache))
+        
         
         
