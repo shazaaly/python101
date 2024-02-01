@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-#!/usr/bin/env python3
-
 import unittest
 from access_nested_map import access_nested_map
 from parameterized import parameterized
